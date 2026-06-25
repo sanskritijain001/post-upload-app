@@ -25,6 +25,9 @@ app.post('/create-post',upload.single("image"), async(req,res)=>{
 
 })
 
+app.get('/', (req, res) => {
+    res.send("Post Upload Backend is Live 🚀");
+});
 
 app.get("/posts", async (req,res)=>{
     const posts = await postModel.find();
